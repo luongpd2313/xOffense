@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href=''><img src='https://img.shields.io/badge/license-MIT-000000.svg'></a> 
-  <a href='https://arxiv.org/pdf/2509.13021'><img src='https://img.shields.io/badge/arXiv-2501.13411-<color>.svg'></a> 
+  <a href='https://arxiv.org/pdf/2509.13021'><img src='https://img.shields.io/badge/arXiv-2509.13201-<color>.svg'></a> 
 </p>
 
 xOffense is an AI-powered penetration testing framework that automates cybersecurity assessments using Large Language Model (LLM) agents. The system combines automated vulnerability scanning, exploitation, and reporting through a sophisticated role-based architecture.
