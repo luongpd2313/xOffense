@@ -51,7 +51,7 @@ xOffense implements a three-phase penetration testing approach:
 
 ### Required Services
 
-1. **Python 3.10+** (recommended: 3.11)
+1. **Python 3.10+** (recommended: 3.11.11)
 2. **MySQL Database** (for session and task persistence)
 3. **Milvus Vector Database** (for RAG knowledge base)
 4. **Kali Linux Machine** (for remote command execution)
@@ -69,8 +69,8 @@ xOffense implements a three-phase penetration testing approach:
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
-cd MyIntern
+git clone https://github.com/luongpd2313/xOffense.git
+cd xOffense
 ```
 
 ### 2. Install Python Dependencies
@@ -114,7 +114,7 @@ python cli.py init
 
 ## Configuration
 
-xOffense uses four YAML configuration files that will be created automatically during initialization:
+xOffense uses four YAML configuration files that will be created automatically after initialization:
 
 ### `basic_config.yaml`
 Core system settings including SSH connections and server ports:
@@ -142,8 +142,8 @@ LLM configuration:
 ```yaml
 api_key: "your-api-key"
 llm_model: "openai"  # or "ollama"
-base_url: "https://api.openai.com/v1"
-llm_model_name: "gpt-4"
+base_url: "https://id.ngrok.app/v1"
+llm_model_name: "ktam204/Qwen3-32B-AWQ-r16-lora-all-Pentest-swift" # our finetuned model
 embedding_models: "maidalun1020/bce-embedding-base_v1"
 temperature: 0.5
 ```
@@ -176,14 +176,8 @@ milvus:
 ### Starting the Services
 
 ```bash
-# Start both API server and Web UI
+# Start RAG module (API server and Web UI)
 python cli.py start --all
-
-# Start only API server
-python cli.py start --api
-
-# Start only Web UI
-python cli.py start --webui
 ```
 
 ### Running Penetration Tests
@@ -192,7 +186,7 @@ python cli.py start --webui
 
 ```bash
 # Interactive role-based penetration testing
-python cli.py vulnbot --max_interactions 10
+python cli.py vulnbot -m 10
 ```
 
 This will:
