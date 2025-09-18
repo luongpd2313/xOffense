@@ -35,7 +35,7 @@ xOffense is an AI-powered penetration testing framework that automates cybersecu
 
 xOffense implements a three-phase penetration testing approach:
 
-1. **Collection Phase**: The Collector agent gathers initial reconnaissance data about targets
+1. **Collection / Reconnaissance Phase**: The Collector agent gathers initial reconnaissance data about targets
 2. **Scanning Phase**: The Scanner agent identifies vulnerabilities and attack vectors
 3. **Exploitation Phase**: The Exploiter agent executes exploitation techniques and privilege escalation
 
@@ -51,7 +51,7 @@ xOffense implements a three-phase penetration testing approach:
 
 ### Required Services
 
-1. **Python 3.8+** (recommended: 3.11)
+1. **Python 3.10+** (recommended: 3.11)
 2. **MySQL Database** (for session and task persistence)
 3. **Milvus Vector Database** (for RAG knowledge base)
 4. **Kali Linux Machine** (for remote command execution)
@@ -60,8 +60,8 @@ xOffense implements a three-phase penetration testing approach:
 ### System Requirements
 
 - Linux/macOS (Windows with WSL)
-- 4GB+ RAM (8GB recommended)
-- Docker (for Milvus)
+- 8GB+ RAM (16GB recommended)
+- Docker (for Milvus and victims from AutoPenBench)
 - SSH client
 
 ## Installation
